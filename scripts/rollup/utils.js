@@ -19,10 +19,10 @@ function getEntryPath(fileName) {
 function getDistPath() {
   return path.join(projectRootPath, '/dist')
 }
+const distPath = getDistPath()
 
 function getBaseRollupPlugins({
-  tsConfig = {
-  },
+  tsConfig = {},
   alias = { __DEV__: isDev },
 } = {}) {
   return [
@@ -34,16 +34,16 @@ function getBaseRollupPlugins({
     ts(tsConfig),
     generatePackageJson({
       inputFolder: projectRootPath,
-      outputFolder: getDistPath(),
-      baseContents: ({ name, description, version , dependencies }) => ({
+      outputFolder: distPath,
+      baseContents: ({ name, description, version, dependencies = {} }) => ({
         name,
         description,
         version,
         main: cjsInputFile,
         module: esmInputFile,
-        dependencies
-      })
-    })
+        dependencies,
+      }),
+    }),
   ]
 }
 
