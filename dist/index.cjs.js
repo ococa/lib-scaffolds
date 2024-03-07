@@ -1,0 +1,1 @@
+"use strict";const o=new class{constructor(){console.log("hh")}};function s(o){console.log("xx",o)}console.log("hh",o),console.log(!1),console.log("test dead conde"),s("asdf"),exports.hh=o,exports.hhh=s;

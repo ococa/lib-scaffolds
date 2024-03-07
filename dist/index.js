@@ -1,1 +1,0 @@
-!function(o){"function"==typeof define&&define.amd?define(o):o()}((function(){"use strict";const o=new class{constructor(){console.log("hh")}};var n;console.log("hh",o),console.log(!1),console.log("test dead conde"),n="asdf",console.log("xx",n)}));

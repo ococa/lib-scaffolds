@@ -13,3 +13,4 @@ backup/
 .env
 
 .vscode
+./dist/**

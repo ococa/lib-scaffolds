@@ -6,14 +6,20 @@ const outputPath = getDistPath()
 
 export default async () => ({
   input: inputPath,
-  output: {
-    file: `${outputPath}/index.js`,
-    name: 'index.js',
-    format: 'umd',
-  },
+  output: [
+    {
+      file: `${outputPath}/index.cjs.js`,
+      name: 'index.js',
+      format: 'cjs',
+    },
+    {
+      file: `${outputPath}/index.esm.js`,
+      name: 'index.esm.js',
+      format: 'es',
+    },
+  ],
   plugins: [
     ...getBaseRollupPlugins(),
-    !isDev && (await import('@rollup/plugin-terser')).default()
+    !isDev && (await import('@rollup/plugin-terser')).default(),
   ],
 })
-
