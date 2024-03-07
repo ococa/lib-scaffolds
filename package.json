@@ -5,7 +5,7 @@
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "scripts": {
-    "test": "npm run lint",
+    "test": "node src/test/index.js",
     "lint": "eslint --ext .ts,.js,.tsx,.jsx ./packages",
     "fix": "eslint --ext .ts,.js,.tsx,.jsx --fix ./packages",
     "build": "rimraf ./dist && rollup --bundleConfigAsCjs --config ./scripts/rollup/rollup.config.js",

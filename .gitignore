@@ -8,7 +8,7 @@ src/test/typescript/axios.js*
 sauce_connect.log
 src/test/module/**/package-lock.json
 backup/
-/.husky/
+#/.husky/
 .npmrc
 .env
 
