@@ -15,7 +15,4 @@ if (!__DEV__) {
 
 hhh('asdf')
 
-export {
-  hhh,
-  hh
-}
+export { hhh, hh }
