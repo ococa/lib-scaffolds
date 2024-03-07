@@ -10,10 +10,7 @@ function hhh(x: string) {
 console.log(__DEV__)
 
 if (!__DEV__) {
-  console.log("test dead conde")
+  console.log('test dead conde')
 }
-
-// @ts-ignore
-function hh2 () {}
 
 hhh('asdf')
