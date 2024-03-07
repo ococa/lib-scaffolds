@@ -26,8 +26,9 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
     ],
     "rules": {
+        // 单独配置单条规则
     }
 }

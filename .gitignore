@@ -4,9 +4,9 @@
 .DS_Store
 node_modules/
 coverage/
-test/typescript/axios.js*
+src/test/typescript/axios.js*
 sauce_connect.log
-test/module/**/package-lock.json
+src/test/module/**/package-lock.json
 backup/
 /.husky/
 .npmrc

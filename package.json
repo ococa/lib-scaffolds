@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node src/test/test.js",
+    "lint": "eslint --ext .ts,.js,.tsx,.jsx --fix --quiet ./packages",
+    "build": "rimraf ./dist && rollup --bundleConfigAsCjs --config ./scripts/rollup/rollup.config.js",
+    "build:dev": "npm run build -- --environment NODE_ENV:development"
   },
   "keywords": [],
   "author": "",
@@ -13,9 +16,17 @@
     "axios": "^1.6.7"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-replace": "^5.0.5",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^20.11.25",
     "@typescript-eslint/eslint-plugin": "^7.1.1",
     "@typescript-eslint/parser": "^7.1.1",
     "eslint": "^8.57.0",
-    "prettier": "3.2.5"
+    "prettier": "3.2.5",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.12.1",
+    "rollup-plugin-typescript2": "^0.36.0"
   }
 }
